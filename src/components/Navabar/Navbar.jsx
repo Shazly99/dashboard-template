@@ -23,7 +23,7 @@ const Navbar = () => {
 
 
     return (
-        <Header className=' bg-blue-100 ' style={{ background: '# ' }}>
+        <Header className='flex justify-content-between align-content-center' style={{ background: '# ' }}>
             <Button
                 type="text"
                 icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
