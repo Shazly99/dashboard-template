@@ -1,0 +1,21 @@
+@import '../style/varibale';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.mt-3{
+ 
+  background-color: red !important;
+  height: 100vh;
+}
+
+
+.demo-logo-vertical {
+  height: 32px;
+  margin: 16px;
+  background: rgba(70, 66, 66, 0.668);
+  border-radius: 6px;
+}
