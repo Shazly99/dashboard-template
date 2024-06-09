@@ -6,16 +6,16 @@
   box-sizing: border-box;
 }
 
-.mt-3{
- 
-  background-color: red !important;
-  height: 100vh;
+/* Your CSS file */
+.active-link {
+  color: #1890ff;
 }
 
-
 .demo-logo-vertical {
-  height: 32px;
-  margin: 16px;
-  background: rgba(70, 66, 66, 0.668);
-  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  background: #fff;
+  border-bottom: 1px solid #f0f0f0;
 }

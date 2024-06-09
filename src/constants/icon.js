@@ -1,10 +1,10 @@
 // ==============================Sidebar======================================
 import { ReactComponent as lang } from '../assets/svg/lang.svg'; 
-
-const icon = {
+ 
+const Icon = {
     // ==============================Sidebar======================================
     lang, 
 
 }
 
-export default icon;
+export default Icon;

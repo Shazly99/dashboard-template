@@ -6,6 +6,7 @@ function General({ children }) {
 
     const [isLang, setIsLang] = useState(Cookies.get('i18next'));
     const [collapsed, setCollapsed] = useState(false);
+    const [visible, setVisible] = useState(false);
 
 
 
@@ -20,7 +21,7 @@ function General({ children }) {
                 isLang,
                 setIsLang,
                 collapsed,
-                setCollapsed
+                setCollapsed,visible, setVisible
             }}>
             {children}
         </GeneralData.Provider>

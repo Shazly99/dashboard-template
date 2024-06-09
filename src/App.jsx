@@ -21,32 +21,34 @@ function App() {
       ]
     },
   ])
+  const theme = {
+    token: {
+      colorPrimary: '#f56a00',
+      // colorPrimaryBg:'#f56a00', 
+      // colorPrimaryBorder:'#f56a00', 
+      // colorPrimaryBgHover:'#f56a00', 
+      // colorPrimaryBorderHover:'#f56a00', 
+      // colorPrimaryActive:'#f56a00', 
+      // colorPrimaryHover:'#f56a00', 
+      // colorPrimaryTextHover:'#f56a00', 
+      // colorPrimaryText:'#f56a00', 
+      // colorPrimaryTextActive:'#f56a00',
+      colorActiveText:'red' 
+
+    },
+    components: {
+      Button: { colorPrimary: '#f56a00' },
+      Input: { colorPrimary: '#f56a00' },
+      Tabs: { colorPrimary: '#f56a00' },
+      Checkbox: { colorPrimary: '#f56a00' },
+      SideBar: { colorPrimary: '#f56a00' },
+      
+    },
+  };
+
   return (
     <>
-      <ConfigProvider
-        theme={{
-          components: {
-            Button: {
-              colorPrimary: '#F1592A',
-              algorithm: true, // Enable algorithm
-            },
-            Input: {
-              colorPrimary: '#F1592A',
-              algorithm: true, // Enable algorithm
-
-            },
-            Tabs: {
-              colorPrimary: '#F1592A',
-              algorithm: true, // Enable algorithm
-            },
-            Checkbox: {
-              colorPrimary: '#27BDB0',
-              algorithm: true, // Enable algorithm
-
-            }
-          },
-        }}
-      >
+      <ConfigProvider theme={theme} >
         <General>
           <RouterProvider router={root} />
         </General>

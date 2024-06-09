@@ -5,6 +5,7 @@ import './i18n';
 
 import './style/index.scss'
 import 'primeflex/primeflex.css';
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />
