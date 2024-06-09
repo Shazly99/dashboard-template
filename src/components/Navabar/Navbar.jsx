@@ -5,10 +5,12 @@ import { MenuFoldOutlined, MenuUnfoldOutlined, LogoutOutlined } from '@ant-desig
 import Lang from "../../assets/svg/lang.svg?react";
 import { GeneralData } from '../../context/General';
 const { Header } = Layout;
-
+import '../style.scss'
+import { useNavigate } from 'react-router-dom';
 const Navbar = () => {
     const { collapsed, setCollapsed, visible, setVisible } = useContext(GeneralData);
     const { i18n } = useTranslation();
+    const navigate   = useNavigate();
 
     const changeLanguage = (language) => {
         i18n.changeLanguage(language);
@@ -27,9 +29,12 @@ const Navbar = () => {
             <Menu.Item key="ar">العربية</Menu.Item>
         </Menu>
     );
+    function logOut() {
+        navigate('/login');
+    }
     const userMenu = (
         <Menu>
-            <Menu.Item key="1" icon={<LogoutOutlined />}>
+            <Menu.Item onClick={()=>logOut()} key="1" icon={<LogoutOutlined />}>
                 تسجيل الخروج
             </Menu.Item>
         </Menu>

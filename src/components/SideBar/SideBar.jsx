@@ -1,12 +1,13 @@
-import React, { useContext, useState } from 'react';
-import { Menu, Layout, Drawer, Button } from 'antd';
-import { DesktopOutlined, FileOutlined, PieChartOutlined, TeamOutlined, UserOutlined, MenuOutlined } from '@ant-design/icons';
+import React, { useContext } from 'react';
+import { Menu, Layout, Drawer } from 'antd';
+import { DesktopOutlined, FileOutlined, PieChartOutlined, TeamOutlined, UserOutlined } from '@ant-design/icons';
 import { Link, NavLink } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 import img from '../../constants/img';
 import { GeneralData } from '../../context/General';
 
 const { Sider } = Layout;
+import '../style.scss'
 
 function getItem(label, key, icon, children, path) {
   return {
@@ -17,13 +18,10 @@ function getItem(label, key, icon, children, path) {
   };
 }
 
-const SideBar = ({ collapsed  }) => {
-
-
-  
+const SideBar = ({ collapsed }) => {
   const isMobile = useMediaQuery({ maxWidth: 767 });
-  const {  setCollapsed, visible, setVisible } = useContext(GeneralData);
- 
+  const { setCollapsed, visible, setVisible } = useContext(GeneralData);
+
   const items = [
     getItem('Dashboard', '1', <PieChartOutlined />, null, '/'),
     getItem('Option 2', '2', <DesktopOutlined />, null, '/option2'),
@@ -39,8 +37,6 @@ const SideBar = ({ collapsed  }) => {
     getItem('Files', '9', <FileOutlined />, null, '/files'),
   ];
 
-
-
   const closeDrawer = () => {
     setVisible(false);
   };
@@ -49,7 +45,6 @@ const SideBar = ({ collapsed  }) => {
     <>
       {isMobile ? (
         <div>
-          {/* <Button type="primary" onClick={showDrawer} icon={<MenuOutlined />} /> */}
           <Drawer
             title="مصنع أغذية الخليج للتموين"
             placement="left"
@@ -67,16 +62,19 @@ const SideBar = ({ collapsed  }) => {
           </Drawer>
         </div>
       ) : (
-        <Sider 
+        <Sider
+          className="sider"
           style={{
             padding: 0,
             background: '#fff',
             position: 'fixed',
             height: '100vh',
+            transition: 'width 0.2s ease-in-out',
           }}
           trigger={null}
           collapsible
           collapsed={collapsed}
+          collapsedWidth={60}  // Set your desired collapsed width here
           onCollapse={(collapse) => setCollapsed(collapse)}
         >
           <div className="demo-logo-vertical">

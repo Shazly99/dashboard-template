@@ -1,5 +1,6 @@
 import { Footer } from 'antd/es/layout/layout'
 import React from 'react'
+import '../style.scss'
  
  
 const Footers = () => {

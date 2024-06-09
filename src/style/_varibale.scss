@@ -57,8 +57,7 @@
      display: $display;
      justify-content: $justify;
      align-items: $align;
-     flex-direction: $dir ;
-
+     flex-direction: $dir ; 
  }
 
  @mixin size($w, $h) {

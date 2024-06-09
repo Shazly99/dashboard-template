@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom'
 
 const Auth = () => {
   return (
-    <div>
+    <div className="app__auth  " >
       <Outlet/>
     </div>
   )

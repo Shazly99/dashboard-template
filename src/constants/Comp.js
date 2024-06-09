@@ -1,6 +1,6 @@
 import MainLayout from '../layout/MainLayout';
 import Home from '../pages/Dashboard/Home';
-import { Login } from './../pages/Auth/Login';
+import Login from './../pages/auth/Login/Login';
 import Auth from './../layout/Auth';
 
 
@@ -9,7 +9,7 @@ const Comp = {
     Auth,
     MainLayout,
     Login,
-    Home 
+    Home
 }
 
 export default Comp
